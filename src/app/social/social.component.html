@@ -1,0 +1,11 @@
+
+<div *ngIf="user else cc">
+  Name : {{user.name}}<br/>
+  Email : {{user.email}}<br/>
+  <img [src]="user.photoUrl"/><br/>
+  <input type="button" value="Logout" (click)="logout()"/>
+</div>
+<ng-template #cc>
+  <input type="button" value="Login with Gmail" (click)="glogin()"/>
+  <input type="button" value="Login with Facebook" (click)="flogin()"/>
+</ng-template>

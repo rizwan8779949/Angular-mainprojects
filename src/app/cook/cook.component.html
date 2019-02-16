@@ -1,0 +1,9 @@
+
+<div *ngIf="coid else cc">
+  Name {{coid}}<br/>
+  <input type="button" value="Del" (click)="delcook()"/>
+</div>
+<ng-template #cc>
+  <input type="button" value="Set" (click)="setcook()"/>
+  <input type="button" value="get" (click)="getcook()"/>
+</ng-template>

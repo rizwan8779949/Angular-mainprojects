@@ -1,0 +1,12 @@
+<div *ngIf="news">
+  <div *ngFor="let n of news.articles| paginate: { itemsPerPage: 6, currentPage: p }">
+  <h1>{{n.title}}</h1>
+  <p>
+    <img [src]="n.urlToImage" width=500 height=200/><br/>
+    {{n.description}}
+  </p>
+  <hr/>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+</div>
